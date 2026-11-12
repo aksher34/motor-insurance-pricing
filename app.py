@@ -74,8 +74,8 @@ office_premium = pure_premium / (1 - loading)
 with right:
     st.subheader("Your quote")
     c1, c2, c3 = st.columns(3)
-    c1.metric("Expected claims / year", f"{freq:.3f}", help="Poisson GLM")
-    c2.metric("Expected cost / claim", f"€{sev * tariff['large_loss_load']:,.0f}",
+    c1.metric("Claims / year", f"{freq:.3f}", help="Expected number of claims per year (Poisson GLM)")
+    c2.metric("Cost / claim", f"€{sev * tariff['large_loss_load']:,.0f}",
               help="Gamma GLM, including the large-loss loading")
     c3.metric("Pure premium", f"€{pure_premium:,.0f}")
     st.metric("Office premium (incl. loading)", f"€{office_premium:,.0f} per year",

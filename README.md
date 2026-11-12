@@ -2,6 +2,8 @@
 
 A motor insurance pricing model built on **678,013 real French motor policies** (freMTPL2). It estimates each policy's expected annual claims cost (the *pure premium*) with the standard actuarial **frequency × severity GLM** approach, turns it into a rating tariff, and compares it against XGBoost.
 
+### 👉 [Try the live premium calculator](https://motor-insurance-pricing.streamlit.app/)
+
 > Built with AI-assisted coding (Claude). The modelling choices, results and their interpretation are documented below and in the notebook.
 
 ![One-way analysis](figures/one_way_frequency.png)
@@ -58,7 +60,7 @@ python -m venv .venv
 pip install -r requirements.txt
 python src/download_data.py       # fetches freMTPL2 from OpenML into data/
 jupyter notebook notebooks/motor_pricing.ipynb
-streamlit run app.py              # premium calculator
+streamlit run app.py              # premium calculator (live: https://motor-insurance-pricing.streamlit.app/)
 ```
 
 ## Project structure
